@@ -1,0 +1,70 @@
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.10.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0"
+  }
+}
+</script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DrummAroo - AI Drum Pattern Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><path fill=%22%23ffc857%22 d=%22M50,2.5L79.4,25L50,47.5L20.6,25L50,2.5z M20.6,75L50,52.5L79.4,75L50,97.5L20.6,75z%22/></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-bg': 'var(--color-bg-brand-bg)',
+              'panel-bg': 'var(--color-panel-bg)',
+              'panel-border': 'var(--color-panel-border)',
+              'text-primary': 'var(--color-text-primary)',
+              'text-secondary': 'var(--color-text-secondary)',
+              'accent': 'var(--color-accent)',
+              'accent-dark': 'var(--color-accent-dark)',
+            },
+            boxShadow: {
+                'glow': '0 0 15px 0 rgba(var(--color-accent-rgb), 0.5)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --color-bg-brand-bg: #111827;
+        --color-text-primary: #f9fafb;
+        --color-text-secondary: #9ca3af;
+        --color-panel-bg: rgba(31, 41, 55, 0.7);
+        --color-panel-border: rgba(75, 85, 99, 0.5);
+        --color-accent: #ffc857;
+        --color-accent-dark: #e0a83e;
+        --color-accent-rgb: 255, 200, 87;
+      }
+      body {
+        background-color: var(--color-bg-brand-bg);
+        font-family: 'Poppins', sans-serif;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path d="M20 0 V 40 M 0 20 H 40" stroke-width="1" stroke="%231f2937"></path></svg>');
+      }
+      .font-sans {
+         font-family: 'Poppins', sans-serif;
+      }
+      /* Ensure accent color is applied for range inputs, etc. */
+      .accent-accent { accent-color: var(--color-accent); }
+    </style>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

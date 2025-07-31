@@ -1,0 +1,6 @@
+{
+  "name": "MiniMusicMuse: DrummAroo!!!!!",
+  "description": "An intelligent application that analyzes uploaded music to understand its rhythm, tempo, and harmony, then generates custom, context-aware drum patterns using the Gemini API.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
